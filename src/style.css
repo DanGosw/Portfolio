@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --white: #fff;
+        --black: #000;
+        --bg: var(--white);
+        --text: var(--black);
+    }
+
+    .dark {
+        --bg: var(--black);
+        --text: var(--white);
+        transition: background 5s ease;
+    }
+
+    * {
+        @apply transition duration-1000 antialiased;
+    }
+
+    .animate-gradient {
+        background-size: 250%;
+        -webkit-animation: animatedgradient 3s ease infinite alternate;
+        -moz-animation: animatedgradient 3s ease infinite alternate;
+        animation: animatedgradient 3s ease infinite alternate;
+    }
+
+    @keyframes animatedgradient {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+    .bg-gradient-transition {
+        transition: background-color 3s;
+    }
+}

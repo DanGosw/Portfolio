@@ -49,6 +49,7 @@ declare global {
   const ref: typeof import('vue')['ref']
   const renderToString: typeof import('vue/server-renderer')['renderToString']
   const resolveComponent: typeof import('vue')['resolveComponent']
+  const router: typeof import('./src/routes/router.js')['default']
   const shallowReactive: typeof import('vue')['shallowReactive']
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
