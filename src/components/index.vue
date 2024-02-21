@@ -1,48 +1,35 @@
 <script setup>
-import { useDark, useToggle } from '@vueuse/core';
+import { useDark, useToggle } from "@vueuse/core";
 
-const isDark = useDark();
+const isDark = useDark({ disableTransition: false });
 const toggleDark = useToggle(isDark);
-
 </script>
 
 <template>
-    <div class="flex justify-center items-center h-screen flex-col">
-        <div>
-            <button class=" bg-indigo-500  dark:bg-gray-500 text-blue-50 rounded-lg p-2 m-2" @click="toggleDark()">
-                Active {{ isDark ? "Light" : "Dark " }} Mode
-            </button>
-        </div>
-        <div class="bg-violet-600 p-4 font-bold text-amber-50 m-2 rounded-md">
-            <h1>
-                Hello World, Fuck You!
-            </h1>
-            <h1>
-                The mode is: {{ isDark ? "Dark " : "Light" }} Mode
-            </h1>
-        </div>
-        <div class="m-2">
-            <a class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Vue 3 dark Mode With Tailwind CSS
-                </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                    install & setup vue 3 dark mode in vue 3 using tailwind css 3
+    <div class="flex h-screen items-center justify-center">
+        <div class="w-72">
+            <div class="rounded-lg bg-white px-6 py-8 shadow-xl dark:bg-slate-800">
+                <button @click="toggleDark()"
+                        class="my-2 flex h-10 w-full items-center justify-center rounded-lg bg-violet-700 text-white">
+                    <span class="ml-2">{{ isDark ? "Dark" : "Light" }}</span>
+                </button>
+                <div class="flex justify-center">
+                    <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+                      <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                           stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"/>
+                      </svg>
+                    </span>
+                </div>
+                <h3 class="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white">Writes Upside-Down</h3>
+                <p class="text-xl tracking-tightest font-bold
+              bg-clip-text text-transparent block bg-gradient-to-r from-purple-600 via-green-500 to-red-500
+              dark:bg-gradient-to-r dark:from-purple-600 dark:via-green-400 dark:to-red-600">
+                    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
                 </p>
-            </a>
-        </div>
-        <div class="bg-white m-2 dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl shadow-indigo-700">
-            <div>
-            <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md">
-                <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                     aria-hidden="true">
-                </svg>
-            </span>
             </div>
-            <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
-            <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-                The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
-            </p>
         </div>
     </div>
+
 </template>

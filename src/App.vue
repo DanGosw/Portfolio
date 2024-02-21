@@ -1,13 +1,11 @@
 <script setup>
-import index from "@/components/index.vue"
+import Index from "@/components/index.vue";
 </script>
 
 <template>
-    <header>
+    <!--    <div class="h-screen w-screen bg-gradient-transition">-->
+    <div class="h-screen bg-gradient-to-r from-indigo-500 to-slate-400 animate-gradient bg-300% dark:to-slate-950 dark:from-slate-800 dark:text-slate-200">
         <index/>
-    </header>
-
+    </div>
+    <!--    </div>-->
 </template>
-
-<style>
-</style>

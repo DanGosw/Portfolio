@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import "@/style.css";
+import { createApp } from "vue";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(VueCookies, { expireTimes: "1d" });
+
+app.use(router);
+app.mount("#app");
