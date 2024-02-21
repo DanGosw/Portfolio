@@ -1,55 +1,35 @@
 <script setup>
-import { useDark, useToggle } from '@vueuse/core';
+import { useDark, useToggle } from "@vueuse/core";
 
-const isDark = useDark();
+const isDark = useDark({ disableTransition: false });
 const toggleDark = useToggle(isDark);
-
 </script>
 
-<template class="bg-violet-600 dark:shadow-indigo-700">
-	<div class="flex justify-center items-center flex-col">
-		<button
-			class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 dark:bg-blue-800 dark:hover:bg-indigo-900 mt-4 text-blue-50 rounded-lg p-2 m-2"
-			@click="toggleDark()">
-			Active {{ isDark ? "Light" : "Dark " }} Mode
-		</button>
-		<div class="bg-violet-600 p-4 hover:bg-blue-600 dark:hover:bg-blue-950 font-bold text-amber-50 m-2 rounded-md">
-			<h1 class="text-2xl">
-				Hello World, Fuck You!
-			</h1>
-			<div class="text-center text-amber-300">
-				<h1>
-					The mode is {{ isDark ? "Dark" : "Light" }}
-				</h1>
-			</div>
-		</div>
-		<div
-			class="m-2 rounded-md  bg-violet-500 hover:bg-amber-400 p-2 shadow-indigo-700 dark:bg-gray-800 dark:hover:bg-fuchsia-400">
-			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Vue 3 dark Mode With Tailwind CSS
-			</h5>
-			<p class="font-normal text-gray-700 dark:text-gray-400">
-				install & setup vue 3 dark mode in vue 3 using tailwind css 3
-			</p>
-		</div>
-		<!--        Prueba Card-->
-		<div class="max-w-sm overflow-hidden rounded-lg shadow-lg m-6 w-96 dark:bg-indigo-900">
-			<img src="https://images3.alphacoders.com/108/1082567.jpg" alt="xd" class="w-full">
-			<div class="m-4 text-slate-900 dark:text-gray-100">
-				<p class="font-semibold text-2xl">
-					The Coldest Sunset
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto temporibus architecto tempore cumque
-					enim ut obcaecati labore officia, possimus distinctio non minima vel provident? Eos impedit a vitae.
-					Voluptate, deleniti.
-				</p>
-				<div class="flex mt-4">
-					<p class="bg-slate-300 font-semibold rounded-full p-1 px-2 mx-2 dark:text-slate-950">#photografy</p>
-					<p class="bg-slate-300 font-semibold rounded-full p-1 px-2 mx-2 dark:text-slate-950">#travel</p>
-					<p class="bg-slate-300 font-semibold rounded-full p-1 px-2 mx-2 dark:text-slate-950">#winter</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<template>
+    <div class="flex h-screen items-center justify-center">
+        <div class="w-72">
+            <div class="rounded-lg bg-white px-6 py-8 shadow-xl dark:bg-slate-800">
+                <button @click="toggleDark()"
+                        class="my-2 flex h-10 w-full items-center justify-center rounded-lg bg-violet-700 text-white">
+                    <span class="ml-2">{{ isDark ? "Dark" : "Light" }}</span>
+                </button>
+                <div class="flex justify-center">
+                    <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+                      <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                           stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"/>
+                      </svg>
+                    </span>
+                </div>
+                <h3 class="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white">Writes Upside-Down</h3>
+                <p class="text-xl tracking-tightest font-bold
+              bg-clip-text text-transparent block bg-gradient-to-r from-purple-600 via-green-500 to-red-500
+              dark:bg-gradient-to-r dark:from-purple-600 dark:via-green-400 dark:to-red-600">
+                    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+                </p>
+            </div>
+        </div>
+    </div>
+
 </template>
