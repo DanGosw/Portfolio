@@ -24,7 +24,10 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@iconify-json/ic": "^1.1.17",
     "@iconify-json/material-symbols": "^1.1.41",
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/ph": "^1.1.11",
     "@vitejs/plugin-vue": "^4.2.1",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",

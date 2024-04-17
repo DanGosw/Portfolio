@@ -22,12 +22,12 @@
 
     .animate-gradient {
         background-size: 250%;
-        -webkit-animation: animatedgradient 3s ease infinite alternate;
-        -moz-animation: animatedgradient 3s ease infinite alternate;
-        animation: animatedgradient 3s ease infinite alternate;
+        -webkit-animation: animatedGradient 3s ease infinite alternate;
+        -moz-animation: animatedGradient 3s ease infinite alternate;
+        animation: animatedGradient 3s ease infinite alternate;
     }
 
-    @keyframes animatedgradient {
+    @keyframes animatedGradient {
         0% {
             background-position: 0 50%;
         }

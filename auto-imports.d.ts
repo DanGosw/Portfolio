@@ -6,6 +6,13 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const IconIcOutlineWbSunny: typeof import('~icons/ic/outline-wb-sunny')['default']
+  const IconMaterialSymbolsGalleryThumbnail: typeof import('~icons/material-symbols/gallery-thumbnail')['default']
+  const IconMaterialSymbolsHomeRounded: typeof import('~icons/material-symbols/home-rounded')['default']
+  const IconMaterialSymbolsInfo: typeof import('~icons/material-symbols/info')['default']
+  const IconMdiGithubBox: typeof import('~icons/mdi/github-box')['default']
+  const IconPhLightMode: typeof import('~icons/ph/light-mode')['default']
+  const IconPhMoonStars: typeof import('~icons/ph/moon-stars')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const VueCookies: typeof import('vue-cookies')['default']
   const computed: typeof import('vue')['computed']
@@ -53,6 +60,7 @@ declare global {
   const shallowReactive: typeof import('vue')['shallowReactive']
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
+  const stylesStore: typeof import('./src/store/styleStore.js')['stylesStore']
   const toRaw: typeof import('vue')['toRaw']
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
