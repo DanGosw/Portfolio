@@ -13,18 +13,18 @@
     .dark {
         --bg: var(--black);
         --text: var(--white);
-        transition: background 5s ease;
+        transition: background 1.5s ease;
     }
 
     * {
-        @apply transition duration-1000 antialiased;
+        @apply transition-all duration-1000 antialiased;
     }
 
     .animate-gradient {
-        background-size: 250%;
-        -webkit-animation: animatedGradient 3s ease infinite alternate;
-        -moz-animation: animatedGradient 3s ease infinite alternate;
-        animation: animatedGradient 3s ease infinite alternate;
+        background-size: 450%; /* Cambio a background-size: cover */
+        -webkit-animation: animatedGradient 5s ease infinite alternate;
+        -moz-animation: animatedGradient 5s ease infinite alternate;
+        animation: animatedGradient 5s ease infinite alternate;
     }
 
     @keyframes animatedGradient {
@@ -32,13 +32,13 @@
             background-position: 0 50%;
         }
         50% {
-            background-position: 100% 50%;
+            background-position: 90% 50%;
         }
         100% {
             background-position: 0 50%;
         }
     }
     .bg-gradient-transition {
-        transition: background-color 3s;
+        transition: background-color 5s;
     }
 }

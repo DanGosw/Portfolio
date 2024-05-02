@@ -3,24 +3,16 @@
 </script>
 
 <template>
-    <div class="flex h-auto w-auto items-center justify-center m-2">
-        <div class="w-80">
-            <div class="rounded-lg bg-white px-6 py-8 shadow-xl dark:bg-slate-900">
-                <div class="flex justify-center">
-                    <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
-                      <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                           stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"/>
-                      </svg>
-                    </span>
-                </div>
-                <h3 class="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white">Writes Upside-Down</h3>
-                <p class="text-xl tracking-tightest font-bold
-              bg-clip-text text-transparent block bg-gradient-to-r from-purple-600 via-green-500 to-red-500
-              dark:bg-gradient-to-r dark:from-purple-600 dark:via-green-400 dark:to-red-600">
-                    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
-                </p>
+    <div class="relative flex h-auto w-auto items-center justify-center">
+        <div class="w-96 rounded-2xl">
+            <img src="@/assets/melissa.jpg" alt="image melissa" class="relative h-96 w-96 rounded-2xl">
+            <div class="absolute right-0 bottom-0 left-0 m-2 h-auto rounded-2xl border-slate-700 bg-white p-4 border-[0.5px] dark:bg-slate-900">
+                <h3 class="text-base font-medium tracking-tight text-slate-900 dark:text-white text-justify">
+                    Pasame mas imagenes tuyas, la concha de la lora
+                </h3>
+                <!--                <p class="block bg-gradient-to-r from-purple-600 via-green-500 to-red-500 bg-clip-text text-xl font-bold text-transparent tracking-tightest dark:bg-gradient-to-r dark:from-purple-600 dark:via-green-400 dark:to-red-600">-->
+                <!--                    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.-->
+                <!--                </p>-->
             </div>
         </div>
     </div>
